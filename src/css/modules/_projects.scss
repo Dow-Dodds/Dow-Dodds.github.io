@@ -1,0 +1,391 @@
+#work-wrapper {
+    background-color: $orange;
+    width: 100vw;
+    
+    
+    #work-hero {
+        height: 88vh;
+        display: flex;
+        flex-wrap: wrap;
+        #heading {
+            padding: 2rem;
+            h1 {
+                font-size: 55px;
+                color: $white;
+                border-bottom: 12px solid;
+                width: 80%;
+            }
+        }
+        #image-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            height: 80%;  
+            align-items: flex-start;
+            align-content: flex-start;
+            padding-top: 1rem;
+            
+            img{
+                width: 80%;
+                object-fit: contain;
+                height: fit-content;
+                border: 2px solid $white;
+            }
+          
+        }
+           #flower-button-wrapper {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                bottom: 2rem;
+                margin-bottom: .5rem;
+                a {
+                    width: 10%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    img {
+                        width: 100%;
+                        margin: 1rem;
+                        -webkit-animation: bounce 1s infinite ease-in-out;
+                        -o-animation: bounce 1s infinite ease-in-out;
+                        -ms-animation: bounce 1s infinite ease-in-out; 
+                        -moz-animation: bounce 1s infinite ease-in-out; 
+                        animation: bounce 1s infinite ease-in-out;
+                    
+                    }
+                    p {
+                        font-size: 12px;
+                        color: $white;
+                    }
+                }
+            }
+    }
+
+
+    #all-work-wrapper {
+        width: 100vw;
+        #projectCard {
+            background-color: $white;
+            border-bottom: $smallborder;
+            #project-header {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                padding: 1rem;
+                #number-wrapper {
+                    width: 20%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    h3 {
+                        position: absolute;
+                        font-size: 25px;
+                        color: $blue;
+                        z-index: 10;
+                    }
+                    .rotate{
+                        animation: rotate 20s linear infinite; 
+                      }
+                    img {
+                        width: 100%;
+                       
+                    }
+                }
+                #title-skills {
+                    width: 80%;
+                    display: flex;
+                    flex-wrap: wrap;
+                   
+                    h3 {
+                        font-size: 30px;
+                        padding: .5rem .5rem .5rem 1rem;
+                        color: $orange;
+                        width: 100%;
+                    }
+                }
+                #type-pill {
+                    padding: 1rem;
+                    p {
+                        width: fit-content;
+                        color: $blue;
+                        @include pill-styles;
+                        padding: .5rem;
+                    }
+                }
+                #view-site-btn {
+                    padding: 1rem; 
+                    transition: all 0.3s ease-in-out;
+                    a {
+                        width: fit-content;
+                        color: $blue;
+                        @include pill-styles;
+                        padding: .5rem;
+                        display: block;
+                        transition: all 0.3s ease-in-out;
+
+                    }
+                }
+                #view-site-btn:hover {
+                    cursor: pointer;
+                    a {
+                        background-color: $pink;
+                    }
+                }
+            }
+            #image-wrapper {
+                padding: 0 2rem 2rem 2rem;
+               
+                img{
+                    width: 100%;
+                    border: 2px solid $orange;
+                }
+                .all-image-wrapper {
+                    display: none;
+                }
+            }
+            #skills-wrapper {
+                display: none;
+            }
+        }
+    }
+}   
+
+@media screen and (min-width:768px) {  
+    #work-wrapper {
+        #work-hero{
+            height: 90vh;
+            #heading {
+                padding: 2rem 4rem;
+                line-height: 6rem;
+            }
+            #flower-button-wrapper {
+                a {
+                    img {
+                        margin: 2rem;
+                    }
+                    p {
+                        font-size: 22px;
+                    }
+                }
+            }
+            #image-wrapper {
+                height: 100%;
+                align-items: flex-start;
+                img {
+                    width: 70%;
+                    margin-top: 4rem;
+                    margin-bottom: 6rem;
+                   
+                }
+            }
+         
+        }
+        #all-work-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            #projectCard {
+                width: 50%;
+                border-left: 1px solid $orange;
+                border-right: 1px solid $orange;
+                // #project-header {
+                //     padding: 2rem 4rem;
+                // }
+                // #image-wrapper {
+                //     padding: 2rem 4rem;
+                // }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width:820px) {  
+    #work-wrapper {
+        #work-hero{
+            #image-wrapper {
+                img {
+                    width: 65%;
+                    height: 50%;
+                    object-fit: cover;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+          
+        }
+    }
+}
+@media screen and (min-width:1000px) {  
+    #work-wrapper {
+        #work-hero{
+            #flower-button-wrapper {
+                a {
+                    width: 5%;
+                    img {
+                        margin: .5rem;
+                    }
+                }
+            }
+        }
+        #all-work-wrapper {
+            #projectCard {
+                position: relative;
+                width: 100%;
+                #project-header {
+                    #number-wrapper {
+                        width: 15%;
+                        h3 {
+                            font-size: 60px;
+                        }
+                    }
+                }
+                #image-wrapper {
+                    padding: 0 0 1rem 0;
+                    display: flex;
+                    justify-content: flex-end;
+                    img {
+                        width: 60%;
+                        border-right: none;
+                        position: relative;
+                        bottom: 2rem;
+
+                    }
+                    #eco-phone {
+                        display: block;
+                        width: 100%;
+                        img {
+                            width: 50%;
+                            position: relative;
+                            top: 33%;
+                            left: 62%;
+                            height: 17rem;
+                            object-fit: cover;
+                            z-index: 10;
+                            border-right: 2px solid $orange;
+                        }
+                    }
+                    #kindred-phone-2 {
+                        display: block;
+                        width: 100%;
+                        img {
+                            width: 50%;
+                            position: relative;
+                            top: 33%;
+                            left: 62%;
+                            height: 17rem;
+                            object-fit: cover;
+                            z-index: 10;
+                            border-right: 2px solid $orange;
+                        }
+                    }
+                    #magic-planet-phone {
+                        display: block;
+                        width: 100%;
+                        img {
+                            width: 50%;
+                            position: relative;
+                            top: 33%;
+                            left: 62%;
+                            height: 17rem;
+                            object-fit: cover;
+                            z-index: 10;
+                            border-right: 2px solid $orange;
+                        }
+                    }
+                    #wanderland-phone {
+                        display: block;
+                        width: 100%;
+                        img {
+                            width: 50%;
+                            position: relative;
+                            top: 33%;
+                            left: 62%;
+                            height: 17rem;
+                            object-fit: cover;
+                            z-index: 10;
+                            border-right: 2px solid $orange;
+                        }
+                    }
+                    #holloware-phone {
+                        display: block;
+                        width: 100%;
+                        img {
+                            width: 50%;
+                            position: relative;
+                            top: 33%;
+                            left: 62%;
+                            height: 17rem;
+                            object-fit: cover;
+                            z-index: 10;
+                            border-right: 2px solid $orange;
+                        }
+                    }
+
+                }
+                #skills-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 3rem;
+                    
+                    .skill-pill {
+                        background-color: $pink;
+                        color:$white;
+                        width: 10rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 2px solid $white;
+                        transition: all 0.3s ease-in-out;
+                        p {
+                            padding: 1rem;
+                            
+                        }
+                    }
+                    .skill-pill:hover {
+                        background-color: $blue;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {  
+    #work-wrapper {
+        #work-hero{
+           #heading {
+             padding: 3rem 5rem;
+           }
+           #image-wrapper {
+            img {
+                width: 60%;
+                position: relative;
+                bottom: 3rem;
+            }
+           }
+        } 
+    }
+}
+@keyframes rotate{
+    to{ transform: rotate(360deg); }
+}
+
+@-webkit-keyframes bounce {
+    0% { transform: translateY(-5px)  }
+    50% { transform: translateY(10px) }
+    100% { transform: translateY(-5px) }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(-5px)  }
+    50% { transform: translateY(10px) }
+    100% { transform: translateY(-5px) }
+}

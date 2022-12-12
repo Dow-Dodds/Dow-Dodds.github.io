@@ -1,0 +1,271 @@
+#contact {
+    width: 100vw;
+    background-color: $orange;
+
+    .bar {
+        height: 30px;
+        overflow: hidden;
+        line-height: 30px;
+        position: relative;
+        background-color: $white
+    }
+    .bar-content {
+        top: 0;
+        left: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        animation: marquee 30s linear infinite;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        span {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            color: $blue;
+        }
+        svg {
+            margin: 0 1rem;
+            color: $blue;
+        }
+    
+    }
+    .marquee2 {
+        animation-delay: 45s;
+      }
+
+    /* Create the animation */
+    @keyframes marquee {
+        0% {
+          left: 100%;
+        }
+        100% {
+          left: -100%
+        }
+      }
+      #main-contact-section {
+        #contact-hero {
+            width: 100vw; 
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1.5rem 2rem;
+            color: $white;
+            justify-content: center;
+            #contact-text-wrapper {
+                padding: 1.5rem 2rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                height: 40%;
+                h1 {
+                    width:100%;
+                }
+                p {
+                    padding: 1rem 0 0 0;
+                }
+            }
+        
+            #contact-image {
+                display: none;
+                height: 60%;
+            }
+
+        }
+        #form-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-top: 2px solid $white;
+            border-bottom: 2px solid $white;
+            padding: 1.5rem 2rem;
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: 80%;
+            label {
+                font-weight: 800;
+                color: $white;
+                width: 80%;
+                margin-bottom: .5rem;
+
+            }
+            input {
+                background-color: $pink;
+                padding: .5rem;
+                color: $white;
+                border: none;
+                border-bottom: 2px solid $white;
+                border-left: 2px solid $white;
+                border-right: 2px solid $white;
+                margin-bottom: 1rem;
+                transition: all 0.3s ease-in-out;
+
+            }
+            textarea {
+                background-color: $pink;
+                padding: .5rem;
+                color: $white;
+                border: none;
+                border-bottom: 2px solid $white;
+                border-left: 2px solid $white;
+                border-right: 2px solid $white;
+                margin-bottom: 1rem;
+                transition: all 0.3s ease-in-out;
+            }
+            input:hover {
+                background-color:$white;
+                color: $blue;
+                border-bottom: 2px solid $blue;
+                border-left: 2px solid $blue;
+                border-right: 2px solid $blue;
+            }
+            textarea:hover {
+                background-color:$white;
+                color: $blue;
+                border-bottom: 2px solid $blue;
+                border-left: 2px solid $blue;
+                border-right: 2px solid $blue;
+            }
+            #button-wrapper {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                #send-button {
+                    width: fit-content
+                }
+                #send-button:hover {
+                    background-color: $white;
+                    border: 2px solid $pink;
+                    h5 {
+                        color: $pink;
+                    }
+                }
+            }
+            
+            }
+        }
+      }
+      #socials-wrapper {
+        width: 100%;
+        padding: 1.5rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 2px solid $white;
+        h3 {
+            width: 100%;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: $white;
+        }
+        .socials {
+            width: 33.3%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            svg {
+                color: $white;
+                font-size: 30px;
+                transition: all 0.3s ease-in-out;
+            }
+            svg:hover {
+                color: $blue;
+                font-size: 50px;
+            }
+        }
+      }
+
+}
+
+@media screen and (min-width:768px) { 
+    #contact {
+       
+        min-height: 65vh;
+        #main-contact-section {
+            display: flex;
+            flex-wrap: wrap;
+        #contact-hero {
+            width: 50%;
+            
+            border-bottom: 2px solid $white;
+            padding: 0;
+            position: relative;
+            #contact-image {
+                display: block;
+                border-top: 2px solid $white;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                
+                }
+            }
+        }
+        #form-container {
+            width: 50%;
+            border-left: 2px solid $white;
+            padding: 2rem;
+            border-top: none;
+            form {
+                justify-content: center;
+            }
+        }
+        }
+        #socials-wrapper {
+            padding: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width:1000px) {  
+    #contact {
+        #main-contact-section {
+            #contact-hero {
+                height:87vh;
+                #contact-text-wrapper {
+                    padding: 2rem 4rem;
+                    justify-content: flex-start;
+
+                }
+                #contact-image {
+                    width: 100%;
+                }
+            }
+            #form-container {
+                form {
+                    input {
+                        padding: 1rem;
+                    }
+                    textarea {
+                        height: 15vh;
+                        padding: 1rem;
+                    }
+                    #button-wrapper {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+        #socials-wrapper {
+            padding: 2rem 4rem;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {  
+    #contact {
+        #contact-hero {
+            #contact-text-wrapper { 
+                padding: 3rem 5rem;
+            }
+        }
+        #socials-wrapper {
+            padding: 3rem 5rem;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+#project-page {
+    background-color: $orange;
+    h1 {
+        color: $white;
+        padding: 1.5rem 2rem;
+        text-align: center;
+    }
+    #project-text-wrapper {
+        width: 100vw;
+        #skills-wrapper {
+            
+            margin: 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .skill-pill {
+                background-color: $pink;
+                border: 2px solid $orange;
+                transition: all 0.3s ease-in-out;
+                margin-bottom: .5rem;
+                p {
+                    padding: 1rem;
+                }
+            }
+        }
+        // .content {
+            
+        // }
+    }
+}

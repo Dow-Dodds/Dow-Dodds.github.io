@@ -1,0 +1,79 @@
+$pink: #FF69B4;
+$orange: #EF7B45;
+$blue: #226CE0;
+$white: #FFF7E3;
+$black: #141115;
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, li {
+    font-family: "gopher", sans-serif;
+    font-weight: 700;
+}
+
+p, a, label {
+    font-family: "gopher", sans-serif;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+$smallborder: 2px solid $orange;
+
+
+@mixin pill-styles {
+    color: $blue;
+    border: 2px solid $blue;
+}
+
+.button {
+    width: 8rem;
+    padding: 1rem;
+    background-color: $blue;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid $white;
+    a {
+        color: $white; 
+        transition: all 0.3s ease-in-out;
+    }
+    h5 {
+        font-size: 14px;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.button:hover {
+    background-color: $orange;
+    
+    h5 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:768px) {  
+   h1 {
+    font-size: 40px;
+   }
+    .button {
+        h5 {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (min-width:1000px) {  
+    h1 {
+        font-size: 50px;
+    }
+    h3 {
+        font-size: 26px;
+    }
+}
